@@ -21,6 +21,7 @@
     "lint:prettier": "prettier \"{**/*,*}.{js,json,md,yml,css}\" --list-different",
     "lint:js": "eslint --cache src test",
     "lint": "npm-run-all -l -p \"lint:**\"",
+    "install": "npm run build",
     "prepare": "npm run build",
     "release": "standard-version",
     "security": "npm audit",
