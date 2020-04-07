@@ -349,6 +349,8 @@ class MiniCssExtractPlugin {
                     'if(dataHref === href || dataHref === fullhref) return resolve();',
                   ]),
                   '}',
+                  `const cssModuleMatchArray = ${this.options.runtimeHooks.cssModuleMatchArray};`,
+                  'if(installedCssChunks && Object.keys(installedCssChunks).length <= 1 && cssModuleMatchArray.indexOf(chunkId)!==-1){return resolve();}',
                   'var linkTag = document.createElement("link");',
                   'linkTag.rel = "stylesheet";',
                   'linkTag.type = "text/css";',
