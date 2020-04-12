@@ -1,12 +1,12 @@
 {
-  "name": "mini-css-extract-plugin",
-  "version": "0.9.0",
+  "name": "fab-style-extract-plugin",
+  "version": "1.0.0",
   "description": "extracts CSS into separate files",
   "license": "MIT",
-  "repository": "webpack-contrib/mini-css-extract-plugin",
-  "author": "Tobias Koppers @sokra",
-  "homepage": "https://github.com/webpack-contrib/mini-css-extract-plugin",
-  "bugs": "https://github.com/webpack-contrib/mini-css-extract-plugin/issues",
+  "repository": "",
+  "author": "Nasir Bashir",
+  "homepage": "https://github.com/nasirbas1/mini-css-extract-plugin.git",
+  "bugs": "https://github.com/nasirbas1/mini-css-extract-plugin.git",
   "main": "dist/cjs.js",
   "engines": {
     "node": ">= 6.9.0"
