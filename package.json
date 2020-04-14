@@ -1,6 +1,6 @@
 {
   "name": "fab-style-extract-plugin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "extracts CSS into separate files",
   "license": "MIT",
   "repository": "",
