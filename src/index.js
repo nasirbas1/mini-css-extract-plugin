@@ -350,7 +350,19 @@ class MiniCssExtractPlugin {
                   ]),
                   '}',
                   `const cssModuleMatchArray = ${this.options.runtimeHooks.cssModuleMatchArray};`,
-                  'if(installedCssChunks && Object.keys(installedCssChunks).length <= 1 && cssModuleMatchArray.indexOf(chunkId)!==-1){return resolve();}',
+                  'if(installedCssChunks && Object.keys(installedCssChunks).length <= 1){',
+                  Template.indent([
+                    'for(var i = 0; i < cssModuleMatchArray.length; i++){',
+                    Template.indent([
+                      'if(href.indexOf(cssModuleMatchArray[i]) !== -1 && href.indexOf(".css") !== -1){',
+                        Template.indent([
+                          'return resolve();',
+                        ]),
+                      '}',
+                    ]),
+                    '}',
+                  ]),
+                  '}',
                   'var linkTag = document.createElement("link");',
                   'linkTag.rel = "stylesheet";',
                   'linkTag.type = "text/css";',
