@@ -350,14 +350,15 @@ class MiniCssExtractPlugin {
                   ]),
                   '}',
                   `const cssModuleMatchArray = ${this.options.runtimeHooks.cssModuleMatchArray};`,
-                  'if(installedCssChunks && Object.keys(installedCssChunks).length <= 1){',
+                  'if(installedCssChunks){',
                   Template.indent([
                     'for(var i = 0; i < cssModuleMatchArray.length; i++){',
                     Template.indent([
                       'if(href.indexOf(cssModuleMatchArray[i]) !== -1 && href.indexOf(".css") !== -1){',
-                        Template.indent([
-                          'return resolve();',
-                        ]),
+                      Template.indent([
+                        'window[cssModuleMatchArray[i]]=fullhref',
+                        'return resolve();',
+                      ]),
                       '}',
                     ]),
                     '}',
